@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ejemplos;
+package paquete1;
 
 /**
  *
@@ -35,7 +35,7 @@ public class Ejemplo02 {
         
         // arreglo de tipo boleano
         boolean[] arreglo5 = new boolean[5];
-        System.out.println(arreglo5[5]);
+        System.out.println(arreglo5[0]);
     }
 
 }

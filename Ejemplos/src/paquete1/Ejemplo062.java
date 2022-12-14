@@ -3,15 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ejemplos;
+package paquete1;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 /**
  *
  * @author reroes
  */
-public class Ejemplo07 {
+public class Ejemplo062 {
 
     /**
      * @param args the command line arguments
@@ -19,16 +20,17 @@ public class Ejemplo07 {
     public static void main(String[] args) {
         // Declarar y generar arreglos en Java
         Scanner entrada = new Scanner(System.in);
-        int dato;
-        int suma = 0;
+        double dato;
+        entrada.useLocale(Locale.US);
         // arreglo de tipo entero
-        int[] arreglo1 = new int[5];
+        double[] arreglo1 = new double[5]; //  se guardaran nombres de personas
         
         // Se asigna valores al arreglo, pidiendo valores por teclado
         // se usa un ciclo repetitivo
         for (int i = 0; i < arreglo1.length; i++) {
             System.out.println("Ingrese un valor para el arreglo");
-            dato = entrada.nextInt();
+            
+            dato = entrada.nextDouble();
             // se asigna la variable dato a la posición del arreglo
             // de acuerdo al valor de i
             arreglo1[i] = dato;
@@ -36,12 +38,9 @@ public class Ejemplo07 {
         
         // Se hace uso del ciclo repetitivo for para recorrer el arreglo
         for (int i = 0; i < arreglo1.length; i++) {
-            // agrego el valor de la posición del arreglo a la variable
-            // acumuladora  suma
-            suma = suma + arreglo1[i];
+            System.out.printf("Subíndice o Índice %d, con valor %.2f\n",
+                    i, arreglo1[i]);
         }
-        
-        System.out.printf("La suma de los valores del arreglo es: %d\n", suma);
         
     }
 
